@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'webapp'
+    'webapp',
+    'personas',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
         'USER': 'sap_user',
         'PASSWORD':'7343891',
         'HOST':'localhost',
-        'PORT':'6666',
+        'PORT':'5432',
     }
 }
 
