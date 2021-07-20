@@ -14,15 +14,33 @@
         </h1>
     </div>
     <div>
-        <ul>
-            {% for persona in personas%}
-                <li>
-                    {{persona.name}} 
-                    {{persona.email}}
-                    <a href="detalle/{{persona.id}}">Ver detalle</a>
-                </li>
-            {% endfor %}
-        </ul>
+        <a href="new">Agregar persona</a>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for persona in personas%}
+                <tr>
+                    <td>{{persona.id}}</td>
+                    <td>{{persona.name}}</td>
+                    <td>{{persona.email}}</td>
+                    <td><a href="detalle/{{persona.id}}">Ver detalle</a></td>
+                    <td><a href="editar/{{persona.id}}">Editar</a></td>
+                    <td><a href="eliminar/{{persona.id}}">Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
     </div>
 </body>
 </html>
